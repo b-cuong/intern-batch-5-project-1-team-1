@@ -1,0 +1,35 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+Layout/ClassStructure:
+  Enabled: true
+
+Metrics/BlockLength:
+  Max: 30
+
+Metrics/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+AllCops:
+  Exclude:
+    - "bin/*"
+    - "db/*"
+    - "db/migrate/*"
+    - "node_modules/**/*"
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - "test/test_helper.rb"
