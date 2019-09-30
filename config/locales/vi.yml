@@ -1,0 +1,20 @@
+vi:
+  layouts:
+    header:
+      title: "Trắc nghiệm tính cáchJohn Holland"
+      info: "Thông tin"
+      logout: "Đăng xuất"
+  tests:
+    index:
+      get_result: "Lấy kết quả"
+    character:
+      suitable_majors: "Các ngành học phù hợp:"
+  results:
+    index:
+      result: "Kết quả trắc nghiệm:"
+      suitable:
+      unsuitable: "Kết quả không phù hợp với lựa chọn ngành bạn dự định học"
+      group_character: "Nhóm tính cách"
+      score: "Điểm"
+      conclusion: "Vậy bạn thuộc 1 trong 2 kiểu tính cách sau:"
+      remake: "Làm lại"
