@@ -1,0 +1,51 @@
+<p id="notice"> <%= notice %></p>
+<p> <strong><h2><%= t '.student_info' %></h2></strong> </p>
+<table class="table table-bordered table-striped tb1">
+    <tr>
+        <th class="text-center"> <%= t '.full_name' %> </th>
+        <th class="text-center"> <%= @user.full_name %> </th>
+    </tr>
+    <tr>
+        <th class="text-center">
+            <strong> <%= t '.gender' %> </strong>
+        </th>
+        <th class="text-center">
+            <%= @user.gender %>
+        </th>
+    </tr>
+    <tr>
+        <th class="text-center">
+            <strong> <%= t '.dob' %> </strong>
+        </th>
+        <th class="text-center">
+            <%= @user.dob %>
+        </th>
+    </tr>
+    <tr>
+        <th class="text-center">
+            <strong> <%= t '.email' %> </strong>
+        </th>
+        <th class="text-center">
+            <%= @user.email %>
+        </th>
+    </tr>
+    <tr>
+        <th class="text-center">
+            <strong> <%= t '.phone' %></strong>
+        </th>
+        <th class="text-center">
+            <%= @user.phone %>
+        </th>
+    </tr>
+    <tr>
+        <th class="text-center">
+            <strong> <%= t '.address' %></strong>
+        </th>
+        <th class="text-center">
+            <%= @user.address %>
+        </th>
+    </tr>
+</table>
+
+<%= link_to t(".Edit"), edit_user_path(@user) %> |
+<%= link_to t(".Back"), users_path %>
