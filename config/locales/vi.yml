@@ -1,0 +1,64 @@
+vi:
+  users: 
+    new:
+      sigup: ĐĂNG KÝ
+      email: E-Mail
+      full_name: Họ tên
+      password: Mật khẩu
+      password_digest: Xác nhận lại
+      gender: Giới tính
+      dob: Ngày sinh
+      phone: Điện thoại
+      address: Địa chỉ
+      Registration: Đăng kí
+    index:
+      All_users: Danh sách tài khoản
+      xtk: Xóa tài khoản ?
+      ttkm: Tạo tài khoản mới ?
+    show: 
+      student_info: Thông tin học sinh
+      email: E-Mail
+      full_name: Họ tên
+      gender: Giới tính
+      dob: Ngày sinh
+      phone: Điện thoại
+      addres: Địa chỉ
+      Edit: Edit
+      Back: Back
+    edit:
+      Update: Update your profile
+      email: E-Mail
+      full_name: Họ tên
+      password: Mật khẩu
+      password_digest: Xác nhận lại
+      Save_changes: Save changes
+  sessions_controller:
+    create:
+      E_M_nottrue: Email/Mật khẩu không hợp lệ
+  users_controller:
+    update:
+      update_succes: Đã cập nhật thành công
+    destroy:
+      delete: Đã xóa thành công
+    create: 
+      success: Đăng nhập thành công
+  layouts:
+    footer:
+      Good_bye: Good bye
+      project: project1
+    header:
+      multiple_choice: TRẮC NGHIỆM JOHN HOLLAND
+      Users: Users
+      Setting : Cài đặt
+      Profile: Thông tin
+      login: ĐĂNG NHẬP
+      logout: Đăng xuất
+      Settings: Cài đặt tài khoản
+    application:
+      multiple_choice: TRẮC NGHIỆM JOHN HOLLAND
+  sessions:
+    new: 
+      login: ĐĂNG NHẬP
+      Email: E- Mail
+      pass: Mật khẩu
+      Create_new: Tạo tài khoản mới !

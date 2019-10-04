@@ -1,33 +1,64 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  users: 
+    new:
+      sigup: sigup
+      email: E-Mail
+      full_name: full_name
+      password: password
+      password_digest: password_digest
+      gender: gender
+      dob: dob
+      phone: phone
+      address: address
+      Registration: Registration
+    index:
+      All_users: All users
+      xtk: Delete the account ?
+      ttkm: Create a new account
+    show:
+      student_info: student information
+      email: E-Mail
+      full_name: full_name
+      gender: gender
+      dob: dob
+      phone: phone
+      addres: addres
+      Edit: Edit
+      Back: Back
+    edit:
+      Update: Update your profile
+      email: E-Mail
+      full_name: full_name
+      password: password
+      password_digest: password_digest
+      Save_changes: Save changes
+  sessions_controller:
+    create:
+      E_M_nottrue: Email or password is incorrect
+  users_controller:
+    update:
+      update_succes: User was successfully created
+    destroy:
+      delete: User was successfully destroyed
+    create:
+      success: success
+  layouts:
+    footer:
+      Good_bye: Good bye
+      project: project1
+    header:
+      multiple_choice: Test John holland
+      Users: Users
+      Setting: Setting
+      Profile: Profile
+      Settings: Settings
+      login: LOG IN
+      logout: LOG OUT
+    application:
+      multiple_choice: Test John holland
+  sessions:
+    new: 
+      login: LOG IN
+      Email: E- Mail
+      pass: Password
+      Create_new: Create a new account
