@@ -1,0 +1,15 @@
+<tr>
+  <td><%= major.id %></td>
+  <td><%= major.name %></td>
+  <td>
+    <% major.characters.each do |character| %>
+    <div><%= character.name %></div>
+    <% end %>
+  </td>
+  <td scope="row">
+    <div>
+      <%= link_to t(".edit"), edit_major_path(major), class: "btn btn-sm btn-primary" %>
+      <%= link_to t(".delete"), major, method: :delete, data: { confirm: t(".delete") } %>
+    </div>
+  </td>
+</tr>

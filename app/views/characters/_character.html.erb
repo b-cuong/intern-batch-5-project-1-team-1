@@ -1,0 +1,11 @@
+<tr>
+  <td><%= character.id %></td>
+  <td><%= character.name %></td>
+  <td><%= character.description %></td>
+  <td scope="row">
+    <div>
+      <%= link_to t(".edit"), edit_character_path(character), class: "btn btn-sm btn-primary" %>
+      <%= link_to t(".delete"), character, method: :delete, data: { confirm: t(".delete") } %>
+    </div>
+  </td>
+</tr>

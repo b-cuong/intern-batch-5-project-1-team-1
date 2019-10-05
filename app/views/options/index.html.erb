@@ -5,22 +5,22 @@
       <div class="card">
         <div class="card-header clearfix">
           <h5 class="float-left">
-            <%= t(".list_hollan") %>
+            <%= t".list_option" %>
           </h5>
-          <%= link_to t(".new"), new_question_path, class: 'btn btn-primary btn-sm float-right' %>
+          <%= link_to t(".new"), new_option_path, class: "btn btn-primary btn-sm float-right" %>
         </div>
         <div class="card-body">
           <table class="table table-condensed table-hover">
             <thead class="thead-inverse">
               <tr>
-                <th><%= t(".id") %></th>
-                <th><%= t(".ques") %></th>
-                <th><%= t(".der_ques") %></th>
+                <th><%= t".id" %></th>
+                <th><%= t".content" %></th>
+                <th><%= t".score" %></th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
-              <%= render @questions %>
+              <%= render @options %>
             </tbody>
           </table>
         </div>

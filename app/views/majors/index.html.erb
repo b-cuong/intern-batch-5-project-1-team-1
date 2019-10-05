@@ -1,48 +1,30 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-12">
-      <div class="card">
-        <div class="card-header clearfix">
-          <h5 class="float-left" index1 >
-           <%= t '.list_holland' %>
-          </h5>
-          <a href="<%= new_major_path %>" class="btn btn-primary btn-sm float-right">
-            <span class="glyphicon glyphicon-plus-sign"></span>  <%= t '.new' %>
-          </a>
-        </div>
-        <div class="card-body">
-          <table class="table table-condensed table-hover">
-            <thead class="thead-inverse">
-              <tr>
-                <th><%= t '.id' %></th>
-                <th><%= t '.major' %></th>
-                <th><%= t '.der_major' %></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @majors.each do |major| %>
-              <tr>
-                <td><%= major.id %> </td>
-                <td><%= major.name %> </td>
-                <td>
-                  <% major.characters.each do |character| %>
-                    <div><%= character.name %></div>
-                  <% end %>
-                </td>
-                <td scope="row">
-                  <div index2>
-                    <%= link_to t(".edit"), edit_major_path(major), class:'btn btn-sm btn-primary' %>
-                    <%= link_to t(".delete"), method: :delete, data: { confirm:  t(".delete") } %>
-                  </div>
-                </td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header clearfix">
+            <h5 class="float-left">
+              <%= t".list_holland" %>
+            </h5>
+            <%= link_to t(".new"), new_major_path, class: "btn btn-primary btn-sm float-right" %>
+          </div>
+          <div class="card-body">
+            <table class="table table-condensed table-hover">
+              <thead class="thead-inverse">
+                <tr>
+                  <th><%= t".id" %></th>
+                  <th><%= t".major" %></th>
+                  <th><%= t".der_major" %></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <%= render @majors %>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>

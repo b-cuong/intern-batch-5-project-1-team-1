@@ -10,11 +10,8 @@ vi:
       dob: Ngày sinh
       phone: Điện thoại
       address: Địa chỉ
-      Registration: Đăng kí
     index:
-      All_users: Danh sách tài khoản
-      xtk: Xóa tài khoản ?
-      ttkm: Tạo tài khoản mới ?
+      all_users: Danh sách tài khoản
     show: 
       student_info: Thông tin học sinh
       email: E-Mail
@@ -23,52 +20,32 @@ vi:
       dob: Ngày sinh
       phone: Điện thoại
       addres: Địa chỉ
-      Edit: Edit
-      Back: Back
+      edit: Edit
+      back: Back
     edit:
-      Update: Update your profile
+      update: Update your profile
       email: E-Mail
       full_name: Họ tên
       password: Mật khẩu
       password_digest: Xác nhận lại
-      Save_changes: Save changes
-  sessions_controller:
-    create:
-      E_M_nottrue: Email/Mật khẩu không hợp lệ
-  users_controller:
-    update:
-      update_succes: Đã cập nhật thành công
-    destroy:
-      delete: Đã xóa thành công
-    create: 
-      success: Đăng nhập thành công
+      save_changes: Save changes
   layouts:
-    footer:
-      Good_bye: Good bye
-      project: project1
     header:
       multiple_choice: TRẮC NGHIỆM JOHN HOLLAND
-      Users: Users
-      Setting : Cài đặt
+      users: Users
+      setting : Cài đặt
       Profile: Thông tin
       login: ĐĂNG NHẬP
       logout: Đăng xuất
-      Settings: Cài đặt tài khoản
+      settings: Cài đặt tài khoản
     application:
       multiple_choice: TRẮC NGHIỆM JOHN HOLLAND
   sessions:
     new: 
       login: ĐĂNG NHẬP
-      Email: E- Mail
+      email: E- Mail
       pass: Mật khẩu
-      Create_new: Tạo tài khoản mới !
-  characters_controller:
-    create:
-      Character_succs: Cập nhật tính cách thành công
-    update:
-      Character_succs: Cập nhật tính cách thành công
-    destroy:
-      Character_succs: Cập nhật tính cách thành công
+      create_new: Tạo tài khoản mới !
   characters:
     form: 
       name: Tính cách
@@ -80,7 +57,7 @@ vi:
     show: 
       charr: Tính cách
       desc_charr: Mô tả tính cách
-      Edit: Edit
+      edit: Edit
       back: back
     new: 
       new_charr: Tạo tính cách theo John Holland
@@ -90,19 +67,13 @@ vi:
       id: ID
       charr: Tính cách
       der_char: Mô tả tính cách
+    character:
       delete: Xóa
       edit: Chỉnh sửa
-  questions_controller:
-    create:
-      questions_succs: Cập nhật câu hỏi thành công
-    update: 
-      questions_succs: Cập nhật câu hỏi thành công
-    destroy:
-      questions_succs: Cập nhật câu hỏi thành công
   questions:
     show:
-      quer: Câu hỏi
-      desc_quer: Nội dung câu hỏi
+      question: Câu hỏi
+      desc_question: Nội dung câu hỏi
       edit: edit
       back: back
     form: 
@@ -116,19 +87,13 @@ vi:
       id: ID
       ques: Câu hỏi
       der_ques: Mô tả câu hỏi
+    question:
       delete: Xóa
       edit: Chỉnh sửa
     new: 
       new_ques: Tạo câu hỏi
     edit:
       edit_ques: Sửa câu hỏi
-  majors_controller:
-    create:
-      majors_succs: Cập nhật nghề nghiệp thành công
-    update: 
-      majors_succs: Cập nhật nghề nghiệp thành công
-    destroy:
-      majors_succs: Cập nhật nghề nghiệp thành công
   majors:
     show:
       name: Nghề nghiệp
@@ -145,6 +110,35 @@ vi:
       create_new: Tạo mới
       back: Trở về
     index: 
+      list_holland: Danh sách nghề
+      new: Tạo mới
       id: ID
       major: Nghề nghiệp
       der_major: Mô tả
+    major:
+      edit: Sửa
+      delete: Xóa
+  options:
+    form:
+      content: Nội dung
+      score: Điểm
+      create_new: Tạo mới
+      back: Trở về
+    new: 
+      new_option: Tạo mới tùy chọn
+    edit:
+      edit_option: Cập nhật tùy chọn
+    show:
+      content: Nội dung
+      score: Điểm
+      edit: edit
+      back: back
+    index: 
+      list_option: Danh sách tùy chọn
+      new: Tạo mới
+      id: ID
+      content: Nội dung
+      score: Điểm
+    option:
+      edit: Sửa
+      delete: Xóa

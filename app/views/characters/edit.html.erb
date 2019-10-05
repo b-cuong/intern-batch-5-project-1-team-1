@@ -3,10 +3,10 @@
     <div class="col-md-8 col-md-offset-2">
       <div class="card">
         <div class="card-header">
-          <%= t '.edit_character' %>
+          <%= t ".edit_character" %>
         </div>
         <div class="card-body">
-            <%= render 'form' %>
+          <%= render "form", character: @character %>
         </div>
       </div>
     </div>

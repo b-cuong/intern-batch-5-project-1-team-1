@@ -1,0 +1,36 @@
+vi:
+  users:
+    update:
+      update_succes: "Đã cập nhật thành công"
+    destroy:
+      delete: "Đã xóa thành công"
+    create: 
+      success: "Đăng nhập thành công"
+  characters:
+    create:
+      character_succs: "Cập nhật tính cách thành công"
+    update:
+      character_succs: "Cập nhật tính cách thành công"
+    destroy:
+      character_succs: "Cập nhật tính cách thành công"
+  questions:
+    create:
+      questions_succs: "Cập nhật câu hỏi thành công"
+    update: 
+      questions_succs: "Cập nhật câu hỏi thành công"
+    destroy:
+      questions_succs: "Cập nhật câu hỏi thành công"
+  majors:
+    create:
+      majors_succs: "Cập nhật nghề nghiệp thành công"
+    update: 
+      majors_succs: "Cập nhật nghề nghiệp thành công"
+    destroy:
+      majors_succs: "Cập nhật nghề nghiệp thành công"
+  options:
+    create:
+      option_succs: "Cập nhật lựa chọn thành công"
+    update:
+      option_succs: "Cập nhật lựa chọn thành công"
+    destroy:
+      option_succs: "Cập nhật lựa chọn thành công"

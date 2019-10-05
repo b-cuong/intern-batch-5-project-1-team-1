@@ -10,11 +10,8 @@ en:
       dob: dob
       phone: phone
       address: address
-      Registration: Registration
     index:
-      All_users: All users
-      xtk: Delete the account ?
-      ttkm: Create a new account
+      all_users: All users
     show:
       student_info: student information
       email: E-Mail
@@ -23,29 +20,16 @@ en:
       dob: dob
       phone: phone
       addres: addres
-      Edit: Edit
-      Back: Back
+      edit: Edit
+      back: Back
     edit:
-      Update: Update your profile
+      update: Update your profile
       email: E-Mail
       full_name: full_name
       password: password
       password_digest: password_digest
-      Save_changes: Save changes
-  sessions_controller:
-    create:
-      E_M_nottrue: Email or password is incorrect
-  users_controller:
-    update:
-      update_succes: User was successfully created
-    destroy:
-      delete: User was successfully destroyed
-    create:
-      success: success
+      save_changes: Save changes
   layouts:
-    footer:
-      Good_bye: Good bye
-      project: project1
     header:
       multiple_choice: Test John holland
       Users: Users
@@ -59,16 +43,9 @@ en:
   sessions:
     new: 
       login: LOG IN
-      Email: E- Mail
+      email: E- Mail
       pass: Password
-      Create_new: Create a new account
-  characters_controller:
-    create:
-      Character_succs: Character was successfully update
-    update: 
-      Character_succs: Character was successfully update
-    destroy:
-      Character_succs: Character was successfully update
+      create_new: Create a new account
   characters:
     form: 
       name: name
@@ -78,9 +55,9 @@ en:
     edit:
       edit_character: exit character
     show: 
-      charr: character
-      desc_charr: description character
-      Edit: Edit
+      character: character
+      desc_character: description character
+      edit: Edit
       back: back
     new: 
       new_charr: character new
@@ -88,21 +65,15 @@ en:
       list_holland: list holland
       new: new holland
       id: ID
-      charr: Character name
-      der_char: description character
+      character: Character name
+      der_character: description character
+    character:
       delete: Destroy
       edit: edit
-  questions_controller:
-    create:
-      questions_succs: questions was successfully update
-    update: 
-      questions_succs: questions was successfully update
-    destroy:
-      questions_succs: questions was successfully update
   questions:
     show:
-      quer: Question
-      desc_quer: description question
+      question: Question
+      desc_question: description question
       edit: edit
       back: back
     form: 
@@ -116,19 +87,13 @@ en:
       id: ID
       ques: Question name
       der_ques: description question
+    question:
       delete: Destroy
       edit: edit
     new: 
       new_ques: new question
     edit:
       edit_ques: edit question
-  majors_controller:
-    create:
-      majors_succs: questions was successfully update
-    update: 
-      majors_succs: questions was successfully update
-    destroy:
-      majors_succs: questions was successfully update
   majors:
     show:
       name: name
@@ -145,7 +110,35 @@ en:
       create_new: create new
       back: return
     index: 
+      list_holland: list Holland
+      new: New
       id: ID
       major: major
       der_major: derscription major
-
+    major:
+      edit: edit
+      delete: Xóa
+  options:
+    form:
+      content: content
+      score: score
+      create_new: create new
+      back: back
+    new: 
+      new_option: new option
+    edit:
+      edit_option: Edit option
+    show:
+      content: content
+      score: score
+      edit: edit
+      back: back
+    index: 
+      list_option: list option
+      new: new
+      id: ID
+      content: content
+      score: score
+    option:
+      edit: edit
+      delete: delete

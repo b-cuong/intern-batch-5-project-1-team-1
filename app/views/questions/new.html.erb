@@ -3,10 +3,10 @@
     <div class="col-md-6 col-md-offset-2">
       <div class="card">
         <div class="card-header">
-            <%= t '.new_ques' %>
+          <%= t(".new_ques") %>
         </div>
         <div class="card-body">
-            <%= render 'form' %>
+          <%= render "form", question: @question %>
         </div>
       </div>
     </div>

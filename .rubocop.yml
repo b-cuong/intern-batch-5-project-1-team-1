@@ -17,6 +17,9 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses_except_multiline
+
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 

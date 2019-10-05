@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
-<p>
-  <strong> <%= t ('.charr') %> </strong>
-  <%= @character.name %>
-</p>
-<p>
-  <strong> <%= t ('.desc_charr') %> </strong>
-  <%= @character.description %>
-</p>
-<%= link_to t(".Edit"), edit_character_path(@character) %> |
+  <p>
+    <strong> <%= t".character" %> </strong>
+    <%= @character.name %>
+  </p>
+  <p>
+    <strong> <%= t".desc_character" %> </strong>
+    <%= @character.description %>
+  </p>
+<%= link_to t(".edit"), edit_character_path(@character) %> |
 <%= link_to t(".back"), characters_path %>

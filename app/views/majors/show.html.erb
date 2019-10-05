@@ -1,16 +1,11 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong><%= t ('.name') %></strong>
-  <%= @major.name %>
-</p>
-
-<p>
-  <strong><%= t ('.desc') %></strong>
-  <% @major.characters.each do |character| %>
-    <div><%= character.name %></div>
-    <% end %>
-</p>
-
+  <p>
+    <strong><%= t".name" %></strong>
+    <%= @major.name %>
+  </p>
+  <p>
+    <strong><%= t".desc" %></strong>
+    <%= render partial: "character", collection: @major.characters %>
+  </p>
 <%= link_to t(".edit"), edit_major_path(@major) %> |
 <%= link_to t(".back"), majors_path %>

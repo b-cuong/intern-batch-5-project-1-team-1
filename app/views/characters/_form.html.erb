@@ -1,14 +1,14 @@
-<%= form_for(@character) do |f| %>
+<%= form_for character do |f| %>
   <div class="form-group ">
-    <%= f.label t('.name'), class: 'control-label' %>
-    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.label t".name", class: "control-label" %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label t('.description'), class: 'control-label' %>
-    <%= f.text_area :description, class: 'form-control', rows: 6 %>
+    <%= f.label t".description", class: "control-label" %>
+    <%= f.text_area :description, class: "form-control", rows: 6 %>
   </div>
   <div class="form-group rows">
-    <%= f.submit t(".create_new"), class: 'col-md-4 btn btn-primary btn-md' %>
-    <%= link_to t(".back"), characters_path, class: 'btn btn-danger btn-md'  %>
+    <%= f.submit t(".create_new"), class: "col-md-4 btn btn-primary btn-md" %>
+    <%= link_to t(".back"), characters_path, class: "btn btn-danger btn-md"  %>
   </div>
 <% end %>
