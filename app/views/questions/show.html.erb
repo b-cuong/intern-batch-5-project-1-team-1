@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t ('.quer') %></strong>
+  <%= @question.content %>
+</p>
+
+<p>
+  <strong><%= t ('.desc_quer') %></strong>
+  <%= @question.character.description %>
+</p>
+
+<%= link_to t(".edit"), edit_question_path(@question) %> |
+<%= link_to t(".back"), questions_path %>

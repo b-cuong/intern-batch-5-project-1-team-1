@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header clearfix">
+          <h5 class="float-left" index1 >
+           <%= t '.list_holland' %>
+          </h5>
+          <a href="<%= new_character_path %>" class="btn btn-primary btn-sm float-right">
+            <span class="glyphicon glyphicon-plus-sign"></span>  <%= t '.new' %>
+          </a>
+        </div>
+        <div class="card-body">
+          <table class="table table-condensed table-hover">
+            <thead class="thead-inverse">
+              <tr>
+                <th><%= t '.id' %></th>
+                <th><%= t '.charr' %></th>
+                <th><%= t '.der_char' %></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @characters.each do |character| %>
+              <tr>
+                <td><%= character.id %></td>
+                <td><%= character.name %></td>
+                <td><%= character.description %></td>
+                <td scope="row">
+                  <div index2>
+                    <%= link_to t(".edit"), edit_character_path(character), class:'btn btn-sm btn-primary' %>
+                    <%= link_to t(".delete"), character, method: :delete, data: { confirm: t(".delete") } %>
+                  </div>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

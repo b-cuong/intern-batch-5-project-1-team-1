@@ -1,0 +1,14 @@
+<%= form_for(@question) do |f| %>
+  <div class="form-group ">
+    <%= f.label t('.name'), class: 'control-label' %>
+    <%= f.text_field :content, class: 'form-control' %>
+  </div>
+  <div class="field">
+      <%= f.label t('.description') %>
+      <%= f.collection_select(:character_id, Character.all, :id, :name) %>
+    </div>
+  <div class="form-group rows">
+    <%= f.submit t(".create_new"), class: 'col-md-4 btn btn-primary btn-md' %>
+    <%= link_to t(".back"), questions_path, class: 'btn btn-danger btn-md'  %>
+  </div>
+<% end %>

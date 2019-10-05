@@ -1,15 +1,17 @@
-ActiveRecord::Schema.define(version: 2019_09_25_154111) do
+ActiveRecord::Schema.define(version: 2019_09_25_155005) do
+
+  create_table "character_majors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "character_id"
+    t.bigint "major_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["character_id"], name: "index_character_majors_on_character_id"
+    t.index ["major_id"], name: "index_character_majors_on_major_id"
+  end
 
   create_table "characters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "chatacter_majors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "character_id"
-    t.integer "major_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,40 +32,58 @@ ActiveRecord::Schema.define(version: 2019_09_25_154111) do
 
   create_table "questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
-    t.integer "character_id"
+    t.bigint "character_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["character_id"], name: "index_questions_on_character_id"
   end
 
   create_table "results", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "question_id"
-    t.integer "option_id"
-    t.integer "user_id"
+    t.bigint "question_id"
+    t.bigint "option_id"
+    t.bigint "user_id"
     t.integer "batch"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["option_id"], name: "index_results_on_option_id"
+    t.index ["question_id"], name: "index_results_on_question_id"
+    t.index ["user_id"], name: "index_results_on_user_id"
   end
 
   create_table "user_majors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "major_id"
+    t.bigint "user_id"
+    t.bigint "major_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["major_id"], name: "index_user_majors_on_major_id"
+    t.index ["user_id"], name: "index_user_majors_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "email"
-    t.string "password_digest"
-    t.string "remember_digest"
-    t.string "activation"
     t.string "full_name"
-    t.datetime "dob"
+    t.date "dob"
+    t.string "email"
     t.string "address"
     t.string "phone"
     t.string "gender"
-    t.boolean "admin"
+    t.string "password_digest"
+    t.string "remember_digest"
+    t.string "activation_digest"
+    t.boolean "activated", default: true
+    t.boolean "admin", default: true
+    t.datetime "activated_at"
+    t.string "reset_digest"
+    t.datetime "reset_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "character_majors", "characters"
+  add_foreign_key "character_majors", "majors"
+  add_foreign_key "questions", "characters"
+  add_foreign_key "results", "options"
+  add_foreign_key "results", "questions"
+  add_foreign_key "results", "users"
+  add_foreign_key "user_majors", "majors"
+  add_foreign_key "user_majors", "users"
 end

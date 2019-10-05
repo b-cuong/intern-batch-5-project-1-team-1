@@ -62,3 +62,89 @@ vi:
       Email: E- Mail
       pass: Mật khẩu
       Create_new: Tạo tài khoản mới !
+  characters_controller:
+    create:
+      Character_succs: Cập nhật tính cách thành công
+    update:
+      Character_succs: Cập nhật tính cách thành công
+    destroy:
+      Character_succs: Cập nhật tính cách thành công
+  characters:
+    form: 
+      name: Tính cách
+      description: Mô tả tính cách
+      create_new: Tạo mới
+      back: Trở về
+    edit:
+      edit_character: Sửa tính cách
+    show: 
+      charr: Tính cách
+      desc_charr: Mô tả tính cách
+      Edit: Edit
+      back: back
+    new: 
+      new_charr: Tạo tính cách theo John Holland
+    index:
+      list_holland: Danh sách mã tính cách John Holland
+      new: Tạo mới
+      id: ID
+      charr: Tính cách
+      der_char: Mô tả tính cách
+      delete: Xóa
+      edit: Chỉnh sửa
+  questions_controller:
+    create:
+      questions_succs: Cập nhật câu hỏi thành công
+    update: 
+      questions_succs: Cập nhật câu hỏi thành công
+    destroy:
+      questions_succs: Cập nhật câu hỏi thành công
+  questions:
+    show:
+      quer: Câu hỏi
+      desc_quer: Nội dung câu hỏi
+      edit: edit
+      back: back
+    form: 
+      name: Câu hỏi
+      description: Mô tả câu hỏi
+      create_new: Tạo mới
+      back: Trở về
+    index:
+      list_holland: Danh sách câu hỏi John Holland
+      new: Tạo mới
+      id: ID
+      ques: Câu hỏi
+      der_ques: Mô tả câu hỏi
+      delete: Xóa
+      edit: Chỉnh sửa
+    new: 
+      new_ques: Tạo câu hỏi
+    edit:
+      edit_ques: Sửa câu hỏi
+  majors_controller:
+    create:
+      majors_succs: Cập nhật nghề nghiệp thành công
+    update: 
+      majors_succs: Cập nhật nghề nghiệp thành công
+    destroy:
+      majors_succs: Cập nhật nghề nghiệp thành công
+  majors:
+    show:
+      name: Nghề nghiệp
+      desc: Nhóm nghề nghiệp
+      edit: edit
+      back: back
+    new:
+      new_major: Tạo tính cách mới
+    edit: 
+      edit_major: Chỉnh sửa nghề nghiệp
+    form: 
+      name: Ngành nghề
+      description: Mô tả ngành nghề
+      create_new: Tạo mới
+      back: Trở về
+    index: 
+      id: ID
+      major: Nghề nghiệp
+      der_major: Mô tả

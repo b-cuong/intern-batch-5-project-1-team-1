@@ -62,3 +62,90 @@ en:
       Email: E- Mail
       pass: Password
       Create_new: Create a new account
+  characters_controller:
+    create:
+      Character_succs: Character was successfully update
+    update: 
+      Character_succs: Character was successfully update
+    destroy:
+      Character_succs: Character was successfully update
+  characters:
+    form: 
+      name: name
+      description: description
+      create_new: create new
+      back: return
+    edit:
+      edit_character: exit character
+    show: 
+      charr: character
+      desc_charr: description character
+      Edit: Edit
+      back: back
+    new: 
+      new_charr: character new
+    index:
+      list_holland: list holland
+      new: new holland
+      id: ID
+      charr: Character name
+      der_char: description character
+      delete: Destroy
+      edit: edit
+  questions_controller:
+    create:
+      questions_succs: questions was successfully update
+    update: 
+      questions_succs: questions was successfully update
+    destroy:
+      questions_succs: questions was successfully update
+  questions:
+    show:
+      quer: Question
+      desc_quer: description question
+      edit: edit
+      back: back
+    form: 
+      name: name
+      description: description
+      create_new: create new
+      back: return
+    index:
+      list_holland: list holland
+      new: new holland
+      id: ID
+      ques: Question name
+      der_ques: description question
+      delete: Destroy
+      edit: edit
+    new: 
+      new_ques: new question
+    edit:
+      edit_ques: edit question
+  majors_controller:
+    create:
+      majors_succs: questions was successfully update
+    update: 
+      majors_succs: questions was successfully update
+    destroy:
+      majors_succs: questions was successfully update
+  majors:
+    show:
+      name: name
+      desc: desonption
+      edit: edit
+      back: back
+    new:
+      new_major: New major
+    edit:
+      edit_major: Edit major
+    form: 
+      name: name
+      description: description
+      create_new: create new
+      back: return
+    index: 
+      id: ID
+      major: major
+      der_major: derscription major
+

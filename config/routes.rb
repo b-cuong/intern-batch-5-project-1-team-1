@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :users
   resources :characters
   resources :questions
+  resources :majors
 end
