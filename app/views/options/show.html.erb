@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong> <%= t".content" %> </strong>
+  <%= @option.content %>
+</p>
+<p>
+  <strong> <%= t".score" %> </strong>
+  <%= @option.score %>
+</p>
+<%= link_to t(".edit"), edit_option_path(@option) %> |
+<%= link_to t(".back"), options_path %>

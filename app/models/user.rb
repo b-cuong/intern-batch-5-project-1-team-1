@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   before_save :downcase_email
 
-  def self.digest(string)
+  def self.digest string
     cost = if string
              ActiveModel::SecurePassword.min_cost
            else BCrypt::Engine::MIN_COST :BCrypt::Engine.cost
@@ -31,7 +31,7 @@ class User < ApplicationRecord
     self.remember_token = User.new_token
   end
 
-  def authenticated?(attribute, token)
+  def authenticated? attribute, token
     digest = send "#{attribute}_digest"
     return false if digest.nil?
 

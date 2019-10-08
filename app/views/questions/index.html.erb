@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header clearfix">
+          <h5 class="float-left">
+            <%= t(".list_hollan") %>
+          </h5>
+          <%= link_to t(".new"), new_question_path, class: 'btn btn-primary btn-sm float-right' %>
+        </div>
+        <div class="card-body">
+          <table class="table table-condensed table-hover">
+            <thead class="thead-inverse">
+              <tr>
+                <th><%= t(".id") %></th>
+                <th><%= t(".ques") %></th>
+                <th><%= t(".der_ques") %></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render @questions %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

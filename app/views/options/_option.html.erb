@@ -1,0 +1,11 @@
+<tr>
+  <td><%= option.id %></td>
+  <td><%= option.content %></td>
+  <td><%= option.score %></td>
+  <td scope="row">
+    <div>
+      <%= link_to t(".edit"), edit_option_path(option), class: "btn btn-sm btn-primary" %>
+      <%= link_to t(".delete"), option, method: :delete, data: { confirm: t(".delete") } %>
+    </div>
+  </td>
+</tr>

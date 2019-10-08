@@ -1,0 +1,16 @@
+<%= form_for major do |f| %>
+  <div class="form-group mb-3">
+    <%= f.label t".name", class: "control-label" %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group mb-3">
+    <%= f.label t".description" %>
+    <%= f.collection_select(:character_ids, major_select_options, :id, :name,
+                                          {include_blank: true},
+                                          {multiple: true, class: "chosen-select w-100"}) %>
+  </div>
+  <div class="form-group rows">
+    <%= f.submit t(".create_new"), class: "col-md-4 btn btn-primary btn-md" %>
+    <%= link_to t(".back"), majors_path, class: "btn btn-danger btn-md" %>
+  </div>
+<% end %>

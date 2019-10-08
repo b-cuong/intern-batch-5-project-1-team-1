@@ -1,0 +1,36 @@
+en:
+  users:
+    update:
+      update_succes: "User was successfully created"
+    destroy:
+      delete: "User was successfully destroyed"
+    create:
+      success: "success"
+  characters:
+    create:
+      character_succs: "Character was successfully update"
+    update: 
+      character_succs: "Character was successfully update"
+    destroy:
+      character_succs: "Character was successfully update"
+  questions:
+    create:
+      questions_succs: "questions was successfully update"
+    update: 
+      questions_succs: "questions was successfully update"
+    destroy:
+      questions_succs: "questions was successfully update"
+  majors:
+    create:
+      majors_succs: " majors was successfully update"
+    update: 
+      majors_succs: " majors was successfully update"
+    destroy:
+      majors_succs: " majors was successfully update"
+  options:
+    create:
+      option_succs: "Options was successfully update"
+    update: 
+      option_succs: "Options was successfully update"
+    destroy:
+      option_succs: "Options was successfully update"

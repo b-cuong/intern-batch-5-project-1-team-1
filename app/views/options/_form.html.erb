@@ -1,0 +1,14 @@
+<%= form_for option do |f| %>
+  <div class="form-group ">
+    <%= f.label t(".content"), class: "control-label" %>
+    <%= f.text_field :content, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label t(".score"), class: "control-label" %>
+    <%= f.text_field :score, class: "form-control" %>
+  </div>
+  <div class="form-group rows">
+    <%= f.submit t(".create_new"), class: "col-md-2 btn btn-primary btn-md" %>
+    <%= link_to t(".back"), options_path, class: "btn btn-danger btn-md"  %>
+  </div>
+<% end %>
