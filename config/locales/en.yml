@@ -142,9 +142,3 @@ en:
     option:
       edit: edit
       delete: delete
-  homes:
-    test:
-      get_results: get results
-      again: again
-    character:
-      interest_groups: interest groups

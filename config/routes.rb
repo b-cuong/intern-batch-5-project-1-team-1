@@ -11,5 +11,4 @@ Rails.application.routes.draw do
   resources :questions
   resources :majors
   resources :options
-  get "/test", to: "homes#test"
 end
