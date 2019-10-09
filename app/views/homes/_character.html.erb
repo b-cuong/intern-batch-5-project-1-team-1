@@ -1,0 +1,18 @@
+<h5><%= t".interest_groups" %><%= character.name %></h5>
+<div class="row">
+  <% character.questions.each do |question| %>
+    <div class="col-md-6">
+      <div class="form-group">
+        <h4><%= question.content %></h4>
+        <% @options.each_with_index do |option, index| %>
+          <div class="form-check">
+            <%= radio_button_tag "result[#{character.id}][#{question.id}]", option.id,
+                                            @options.first == option, class: "form-check-input" %>
+            <%= label_tag "result_#{character.id}_#{question.id}_#{option.id}", option.content,
+                                              class: "form-check-label" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

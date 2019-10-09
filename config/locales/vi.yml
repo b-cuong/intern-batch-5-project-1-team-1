@@ -142,3 +142,9 @@ vi:
     option:
       edit: Sửa
       delete: Xóa
+  homes:
+    test:
+      get_results: Lấy kết quả
+      again: làm lại
+    character:
+      interest_groups: Nhóm sở thích 
