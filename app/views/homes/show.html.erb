@@ -1,0 +1,33 @@
+<p>
+  <strong>
+    <h4><%= t".result_test" %></h4>
+  </strong>
+</p>
+<div class="row">
+  <div class="col-md-6">
+    <table class="table table-bordered table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Nhóm tính cách</th>
+          <th scope="col">Điểm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "result", collection: @results %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div><%= t".advisory" %>
+  <%= @maxs.character.name %>
+  <%= @maxs.sum_score %><%= t".score" %></div>
+<%= @maxs.character.description %>
+<hr>
+<div><%= t".list_major" %></div>
+<%= render partial: "major", collection: @maxs.character.majors %>
+<div class="form-group">
+  <div class="col-md-6 col-md-offset-4">
+    <%= link_to t(".information"), current_user, class: "btn btn-danger btn-xs pull-right" %>
+    <%= link_to t(".again"), homes_path, class: "btn btn-danger btn-xs pull-right" %>
+  </div>
+</div>

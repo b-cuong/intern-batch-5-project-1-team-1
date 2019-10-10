@@ -11,5 +11,8 @@ Rails.application.routes.draw do
   resources :questions
   resources :majors
   resources :options
-  get "/test", to: "homes#test"
+  resources :homes
+  # get "/homes", to: "homes#index"
+  # post "/test", to: "homes#create"
+  # get "/test/:batch", to: "homes#show"
 end

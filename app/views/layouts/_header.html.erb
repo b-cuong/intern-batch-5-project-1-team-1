@@ -1,26 +1,47 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container">
-      <%= link_to t(".multiple_choice"), root_path, id: "logo" %>
-      <nav>
-        <ul class="nav navbar-nav navbar-right">
-          <% if logged_in? %>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <%= t(".setting") %> <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to t(".Profile"), current_user %></li>
-                <li><%= link_to t(".settings"), '#' %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to t(".logout"), logout_path, method: :delete %>
-                </li>
-              </ul>
-            </li>
-          <% else %>
-            <li><%= link_to t(".login"), login_path %></li>
-          <% end %>
+<header class="navbar navbar-expand-lg navbar-light bg-light pl-1 pr-2 sticky-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <%= link_to t(".multiple_choice"), root_path, class: "navbar-brand text-primary", id: "logo" %>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <% if logged_in? %>
+        <li class="nav-item">
+          <%= link_to t(".major"), majors_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to t(".character"), characters_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to t(".question"), questions_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to t(".option"), options_path, class: "nav-link" %>
+        </li>
+        <% end %>
+      </ul>
+      <div class="form-inline">
+        <% if logged_in? %>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= current_user.full_name %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <%= link_to t(".Profile"), current_user, class: "dropdown-item" %>
+              <%= link_to t(".settings"), edit_user_path(current_user), class: "dropdown-item" %>
+              <%= link_to t(".logout"), logout_path, class: "dropdown-item", method: :delete %>
+            </div>
+          </li>
         </ul>
-      </nav>
+        <% else %>
+        <%= link_to t(".signup"), signup_path, class: "btn btn-outline-secondary mr-2" %>
+        <%= link_to t(".login"), login_path, class: "btn btn-outline-primary" %>
+        <% end %>
+      </div>
     </div>
+  </div>
 </header>

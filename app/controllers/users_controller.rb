@@ -5,9 +5,19 @@ class UsersController < ApplicationController
     @user = User.all
   end
 
-  def show; end
+  def show
+    @characters = Character.includes(:majors).all
+    @results = Result.select("results.batch as luot", "results.character_id", "sum(options.score) as sum_score")
+                     .joins(:option)
+                     .includes(character: :majors)
+                     .where(user_id: current_user.id)
+                     .group(:batch)
+                     .group(:character_id)
+    @maxs = @results.max_by { |luot, character_id, sum_score| sum_score }
+  end
 
   def new
+    redirect_to homes_path if logged_in?
     @user = User.new
   end
 
@@ -18,7 +28,7 @@ class UsersController < ApplicationController
     return render :new unless @user.save
 
     log_in @user
-    redirect_to @user
+    redirect_to homes_path
   end
 
   def update

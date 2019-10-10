@@ -51,5 +51,35 @@
     </tr>
 </table>
 
-<%= link_to t(".edit"), edit_user_path(@user) %> |
-<%= link_to t(".back"), users_path %>
+<p>
+    <strong>
+      <h4> Lịch sử trắc nghiệm </h4>
+    </strong>
+  </p>
+
+<% @results.each do |result| %>
+  <div>
+    Lượt: 
+    <%= result.luot %>
+    <%= result.character.name %>
+    <%= result.sum_score %>
+  </div>
+  <hr>
+<% end %>
+  
+    <div><%= t".advisory" %>
+      <%= @maxs.character.name %>
+      <%= @maxs.sum_score %><%= t".score" %></div>
+    <%= @maxs.character.description %>
+    <hr>
+    <div><%= t".list_major" %></div>
+    <%= render partial: "major", collection: @maxs.character.majors %>
+  
+
+      
+      <div class="form-group">
+        <div class="col-md-6 col-md-offset-4">
+          <%= link_to t(".information"), current_user, class: "btn btn-danger btn-xs pull-right" %>
+          <%= link_to t(".again"), homes_path, class: "btn btn-danger btn-xs pull-right" %>
+        </div>
+      </div>
