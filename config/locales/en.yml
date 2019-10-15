@@ -38,6 +38,11 @@ en:
       Settings: Settings
       login: LOG IN
       logout: LOG OUT
+      major: major
+      character: character
+      question: question
+      option: option
+      signup: signup
     application:
       multiple_choice: Test John holland
   sessions:
@@ -143,8 +148,15 @@ en:
       edit: edit
       delete: delete
   homes:
-    test:
+    index:
       get_results: get results
       again: again
     character:
       interest_groups: interest groups
+    show: 
+      result_test: result test
+      advisory: Advisory
+      list_major: List major
+      score: score
+      again: again
+      information: information

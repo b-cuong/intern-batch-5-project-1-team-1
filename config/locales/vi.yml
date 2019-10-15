@@ -38,6 +38,11 @@ vi:
       login: ĐĂNG NHẬP
       logout: Đăng xuất
       settings: Cài đặt tài khoản
+      major: Ngành học
+      character: Tính cách
+      question: Câu hỏi
+      option: Lựa chọn
+      signup: Đăng kí
     application:
       multiple_choice: TRẮC NGHIỆM JOHN HOLLAND
   sessions:
@@ -143,8 +148,15 @@ vi:
       edit: Sửa
       delete: Xóa
   homes:
-    test:
+    index:
       get_results: Lấy kết quả
       again: làm lại
     character:
       interest_groups: Nhóm sở thích 
+    show: 
+      result_test: KẾT QUẢ TRẮC NGHIỆM
+      advisory: Bạn thuộc nhóm
+      list_major: Các ngành nghề thuộc nhóm kết quả của bạn 
+      score: điểm
+      again: làm lại
+      information: Thông tin
